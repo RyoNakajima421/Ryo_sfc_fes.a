@@ -63,12 +63,10 @@ function renderPictogramIcon(icon) {
 }
 
 export function renderQuickLink(label, route, hint, icon) {
-
     console.log(icon);
     const iconHTML = icon
         ? `<img src="${escapeHTML(icon)}" alt="" />`
         : escapeHTML(label.slice(0, 1));
-
 
     return `
     <button class="quick-link" data-route="${escapeHTML(route)}">
@@ -76,8 +74,8 @@ export function renderQuickLink(label, route, hint, icon) {
         ${iconHTML}
       </span>
       <span class="quick-link__body">
-        <strong>${escapeHTML(label)}</strong>
-        <span>${escapeHTML(hint)}</span>
+        <strong class="quick-link__label">${escapeHTML(label)}</strong>
+        <span class="quick-link__hint">${escapeHTML(hint)}</span>
       </span>
     </button>
   `;
