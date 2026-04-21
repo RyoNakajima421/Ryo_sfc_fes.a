@@ -37,7 +37,7 @@ const pageTitles = {
   timetable: 'ステージ公演',
   'stage-detail': 'ステージ詳細',
   food: '飲食',
-  favorites: 'お気に入り',
+  favorites: 'お入り',
   admin: '管理画面',
   'not-found': 'Not Found',
 };
