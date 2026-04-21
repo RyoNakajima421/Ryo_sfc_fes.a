@@ -39,14 +39,12 @@ html {
 }
 
 body {
-  background-color: red !important;
+  background-color: red !important; /* これが生きるようにする */
   margin: 0;
   font-family: var(--font-ui);
-  background: var(--bg);
+  /* background: var(--bg); */   /* ←ここをコメントアウト（無効化） */
   color: var(--text);
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* 以下略 */
 }
 
 button,
