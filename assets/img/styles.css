@@ -5880,22 +5880,22 @@ padding: 15px;
       }
       
     .quick-link__label {
-    display: block;    
-    /* 8.1remの超特大サイズ */
-    font-size: 1.1rem;
-    color: #333; 
-    
-    /* フォント設定 */
-    font-family: "Impact", "Arial Black", "Zen Maru Gothic", "M PLUS Rounded 1c", sans-serif;
-    font-weight: 900; 
-    
-    /* 特大文字のための微調整 */
-    line-height: 1.1;       /* 文字が大きいため、行間を詰めないと間延びします */
-    letter-spacing: -2px;   /* これだけ大きい場合は、逆に少し詰めると塊感が出てカッコいいです */
-    word-break: break-all;  /* 長い単語で画面を突き抜けないように保険をかけます */
-    
-    /* おまけ：少しだけ立体感を出すなら（不要なら消してください） */
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+        display: block;    
+        /* 8.1remの超特大サイズ */
+        font-size: 8.1rem;
+        color: #333; 
+        
+        /* フォント設定 */
+        font-family: "Impact", "Arial Black", "Zen Maru Gothic", "M PLUS Rounded 1c", sans-serif;
+        font-weight: 900; 
+        
+        /* 特大文字のための微調整 */
+        line-height: 1.1;       /* 文字が大きいため、行間を詰めないと間延びします */
+        letter-spacing: -2px;   /* これだけ大きい場合は、逆に少し詰めると塊感が出てカッコいいです */
+        word-break: break-all;  /* 長い単語で画面を突き抜けないように保険をかけます */
+        
+        /* おまけ：少しだけ立体感を出すなら（不要なら消してください） */
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
     }
   
   .quick-link__hint {
