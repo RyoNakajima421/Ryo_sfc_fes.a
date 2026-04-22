@@ -11,7 +11,7 @@ export const homePage = {
         ${renderQuickLink('企画', '/projects', '全ての企画から絞り込み検索が可能です。', "assets/img/attractions.png")}
         ${renderQuickLink('ステージ公演', '/stage', '公演の時間と場所の確認をすることができます。', "assets/img/event.png")}
         ${renderQuickLink('飲食', '/food', 'おいしい。', "assets/img/food.png")}
-        ${renderQuickLink('お気に入り', '/favorites', '保存した企画', "assets/img/map.png")}
+        ${renderQuickLink('お気に入り', '/favorites', '保存した企画', "assets/img/heart.png")}
       </section>
     `;
   },
