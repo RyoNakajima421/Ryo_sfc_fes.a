@@ -33,7 +33,7 @@ html {
 }
 
 body {
-  background-color: red !important; /* これが生きるようにする */
+  background-color: red ; /* これが生きるようにする */
   margin: 0;
   font-family: var(--font-ui);
   /* background: var(--bg); */   /* ←ここをコメントアウト（無効化） */
@@ -5882,7 +5882,7 @@ padding: 15px;
     .quick-link__label {
         display: block;    
         /* 8.1remの超特大サイズ */
-        font-size: 3.5rem !important;
+        font-size: 2.0rem !important;
         color: #333; 
         
         /* フォント設定 */
