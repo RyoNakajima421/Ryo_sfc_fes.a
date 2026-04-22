@@ -5882,7 +5882,7 @@ padding: 15px;
   .quick-link__label {
       display: block;    
       font-size: 8.1rem;
-      color: #333; /* 元の配色 */
+      color: #00f2fe; /* 元の配色 */
 
       /* ▼ タイトルのフォントを大幅に変更 ▼ */
       /* ImpactやArial Blackのような極太フォント、または丸ゴシックを指定 */
