@@ -5882,7 +5882,7 @@ padding: 15px;
     .quick-link__label {
         display: block;    
         /* 8.1remの超特大サイズ */
-        font-size: 8.1rem !important;
+        font-size: 3.5rem !important;
         color: #333; 
         
         /* フォント設定 */
