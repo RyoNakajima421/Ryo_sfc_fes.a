@@ -63,21 +63,20 @@ function renderPictogramIcon(icon) {
 }
 
 export function renderQuickLink(label, route, hint, icon) {
-    // アイコンの判定を修正（renderPictogramIconを使う形に合わせるか、シンプルにする）
     const iconHTML = icon
-        ? `<img src="${escapeHTML(icon)}" alt="" style="width:100%; height:100%; object-fit:cover;" />`
+        ? `<img src="${escapeHTML(icon)}" alt="" class="quick-link__img" />`
         : `<span class="quick-link__initial">${escapeHTML(label.slice(0, 1))}</span>`;
 
     return `
-    <button class="quick-link" data-route="${escapeHTML(route)}" style="height: auto; min-height: 200px; padding: 20px;">
-      <span class="quick-link__icon" aria-hidden="true" style="flex-shrink: 0;">
+    <button class="quick-link" data-route="${escapeHTML(route)}">
+      <span class="quick-link__icon" aria-hidden="true">
         ${iconHTML}
       </span>
-      <span class="quick-link__body" style="flex: 1;">
-        <strong class="quick-link__label" style="display: block; font-size: 8.1rem; color: #00f2fe; line-height: 1; font-family: 'Impact', sans-serif;">
+      <span class="quick-link__body">
+        <strong class="quick-link__label">
           ${escapeHTML(label)}
         </strong>
-        <span class="quick-link__hint" style="display: block; font-size: 1.2rem;">
+        <span class="quick-link__hint">
           ${escapeHTML(hint)}
         </span>
       </span>
