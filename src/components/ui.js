@@ -87,11 +87,9 @@ function renderPictogramIcon(icon) {
 
 
 
-
 export function renderQuickLink(label, route, hint, icon) {
-    const iconHTML = icon
-        ? `<img src="${escapeHTML(icon)}" alt="" class="quick-link__img" />`
-        : `<span class="quick-link__initial">${escapeHTML(label.slice(0, 1))}</span>`;
+    // 修正ポイント： icon が map や food などの文字列の時、renderPictogramIcon を通す
+    const iconHTML = renderPictogramIcon(icon);
 
     return `
     <button class="quick-link" data-route="${escapeHTML(route)}">
