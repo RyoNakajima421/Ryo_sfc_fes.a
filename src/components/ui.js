@@ -45,22 +45,48 @@ export function renderStatCard(label, value, note = '') {
   `;
 }
 
+
+
+
+
+
 function renderPictogramIcon(icon) {
-  const common = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"';
+  // すべてのアイコンに共通のスタイル（線の太さや色）
+  // stroke-width="2" にして、Impactフォントに負けない強さにしています
+  const common = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="quick-link__svg"';
+
   const icons = {
-    map: '<path d="M4 6l5-2 6 2 5-2v14l-5 2-6-2-5 2z" /><path d="M9 4v14" /><path d="M15 6v14" />',
-    projects: '<rect x="4.5" y="5" width="15" height="14" rx="3" /><path d="M8 9.5h8" /><path d="M8 13h5" /><path d="M8 16.5h6" />',
-    stage: '<path d="M5 7h14" /><path d="M7.5 7v9.5" /><path d="M16.5 7v9.5" /><path d="M9 16.5h6" /><path d="M12 11.5v5" />',
-    food: '<path d="M8 4v8" /><path d="M6 4v4.5" /><path d="M10 4v4.5" /><path d="M8 12v8" /><path d="M16 4c-1.7 1.4-2.5 3.1-2.5 5V20" /><path d="M16 4v16" />',
-    favorite: '<path d="M12 3.8l2.55 5.17 5.7.83-4.12 4.02.97 5.68L12 16.82 6.9 19.5l.97-5.68L3.75 9.8l5.7-.83z" />',
+    // 1. マップ（地図・ピン）
+    map: `<svg ${common}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>`,
+
+    // 2. 企画（リスト・虫眼鏡）
+    projects: `<svg ${common}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>`,
+
+    // 3. ステージ公演（マイク・波形）
+    stage: `<svg ${common}><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>`,
+
+    // 4. 飲食（カトラリー・フォーク＆ナイフ）
+    food: `<svg ${common}><path d="M18 8A6 6 0 0 0 6 8c0 7 6 13 6 13s6-6 6-13z"></path><line x1="12" y1="22" x2="12" y2="8"></line><path d="M9 6H8v4h1Z"></path><path d="M16 6h-1v4h1Z"></path><path d="M12 6h0"></path></svg>`,
+    // もし上の「飲食」がピンっぽすぎるなら、こっちの「フォーク＆ナイフ」に差し替えてください
+    // food: `<svg ${common}><path d="M18 20l-4-4"></path><path d="M20 18l-4-4"></path><path d="M12 14l1.5-1.5a3 3 0 1 0-4.24-4.24L8 9.76a2 2 0 0 0 0 2.83L11 15"></path><path d="M22 22l-2-2"></path><path d="M4 4l.46 2.67a1.86 1.86 0 0 0 2.89 1.44l1.24-.85a1.86 1.86 0 0 0 .61-2l-.47-2.67M4 4h7"></path></svg>`,
+
+    // 5. お気に入り（星・スター）
+    favorite: `<svg ${common}><defs><linearGradient id="starGradient" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#ffeb3b"/><stop offset="100%" stop-color="#f44336"/></linearGradient></defs><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="url(#starGradient)"></path></svg>`,
   };
 
   if (icons[icon]) {
-    return `<svg class="quick-link__svg" ${common} aria-hidden="true">${icons[icon]}</svg>`;
+    // 修正：元のコードではここで path だけ返していましたが、
+    // 呼び出し元が ${icons[icon]} を SVGタグの中にいれる前提でないなら、SVGタグごと返す必要があります。
+    // 元の renderPictogramIcon の実装に合わせて調整してください。
+    return icons[icon]; 
   }
 
   return `<span class="quick-link__letter">${escapeHTML(icon)}</span>`;
 }
+
+
+
+
 
 export function renderQuickLink(label, route, hint, icon) {
     const iconHTML = icon
