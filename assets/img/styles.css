@@ -5900,7 +5900,7 @@ padding: 15px;
   
   .quick-link__hint {
       display: block; 
-      font-size: 0.85rem;
+      font-size: 1.85rem;
       color: #666; /* 元の配色 */
       font-family: "serif"; /* 元のまま */
   }
