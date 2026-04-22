@@ -5882,11 +5882,11 @@ padding: 15px;
     .quick-link__label {
         display: block;    
         /* 8.1remの超特大サイズ */
-        font-size: 1.0rem !important;
+        font-size: 0.8rem !important;
         color: #333; 
         
         /* フォント設定 */
-        font-family: "Impact", "Arial Black", "Zen Maru Gothic", "M PLUS Rounded 1c", sans-serif;
+        font-family: "Impact", "Arial Black", "Zen Maru Gothic", "M PLUS Rounded 1c", Zen Maru Gothic;
         font-weight: 900; 
         
         /* 特大文字のための微調整 */
