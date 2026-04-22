@@ -5874,83 +5874,29 @@ padding: 15px;
 
 
 
-
-
-/* ボタン全体をダークなグラデーションカード風に大幅変更 */
-.quick-link {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    border: 2px solid #0f3460;
-    border-radius: 16px;
-    padding: 20px 30px;
-    cursor: pointer;
-    transition: all 0.3s ease; /* ホバー用のアニメーション */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    max-width: 500px;
-}
-
-/* マウスカーソルを乗せたときのアクション（浮き上がって光る） */
-.quick-link:hover {
-    transform: translateY(-5px) scale(1.02);
-    border-color: #e94560;
-    box-shadow: 0 15px 25px rgba(233, 69, 96, 0.4);
-}
-
-/* アイコン部分を丸く光らせる */
-.quick-link__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    background: #e94560;
-    border-radius: 50%;
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-    box-shadow: 0 0 15px #e94560;
-    flex-shrink: 0;
-}
-
-.quick-link__icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-/* テキストのコンテナ */
 .quick-link__body {
-    font-family: "Courier New", Courier, monospace; /* 明確な違いを出すため等幅フォントに変更 */
-    text-align: left;
-}
+      /* 全体の基本フォントは元のまま */
+      font-family: "Noto Sans JP", sans-serif; 
+  }
+  
+  .quick-link__label {
+      display: block;    
+      font-size: 5.1rem;
+      color: #333; /* 元の配色 */
 
-/* ラベルをネオンシアン色に */
-.quick-link__label {
-    display: block;
-    /* 元の5.1remは巨大すぎる可能性があるため、デザインに合わせて調整。
-       元の超特大サイズが良い場合は 5.1rem に戻してください */
-    font-size: 1.8rem; 
-    font-weight: 900;
-    color: #00f2fe; /* サイバーな水色 */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 8px rgba(0, 242, 254, 0.6); /* 光彩効果 */
-    margin-bottom: 5px;
-}
-
-/* ヒントテキストをネオンピンク色に */
-.quick-link__hint {
-    display: block;
-    font-size: 1rem;
-    color: #ff99cc; /* ラベルとコントラストをつけるピンク */
-    font-family: sans-serif;
-    font-style: italic; /* 斜体にして雰囲気を変更 */
-    opacity: 0.9;
-}
+      /* ▼ タイトルのフォントを大幅に変更 ▼ */
+      /* ImpactやArial Blackのような極太フォント、または丸ゴシックを指定 */
+      font-family: "Impact", "Arial Black", "Zen Maru Gothic", "M PLUS Rounded 1c", sans-serif;
+      font-weight: 900; /* より太くして目立たせる */
+      letter-spacing: 2px; /* 文字の間隔を少し広げて読みやすくする */
+  }
+  
+  .quick-link__hint {
+      display: block; 
+      font-size: 0.85rem;
+      color: #666; /* 元の配色 */
+      font-family: "serif"; /* 元のまま */
+  }
 
 
 
